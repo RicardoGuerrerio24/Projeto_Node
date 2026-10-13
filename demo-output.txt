@@ -1,0 +1,76 @@
+
+=== TRIANGLE ===
+Nós: 3 | Ligações: 3
+Representação visual no terminal:
+        /\
+       /  \
+      /    \
+     /      \
+    /________\
+Ligações guardadas na lista ligada:
+  T1 -> T2
+  T2 -> T3
+  T3 -> T1
+
+Vizinhos de cada nó (previous | current | next):
+  T3 | T1 | T2
+  T1 | T2 | T3
+  T2 | T3 | T1
+
+Percurso seguindo next:
+  passo 0: current = T1, previous = T3, next = T2
+  passo 1: current = T2, previous = T1, next = T3
+  passo 2: current = T3, previous = T2, next = T1
+  Após 3 passos, next volta a T1 (ciclo fechado da figura).
+
+=== RECTANGLE ===
+Nós: 4 | Ligações: 4
+Representação visual no terminal:
+    +------------+
+    |            |
+    |            |
+    |            |
+    +------------+
+Ligações guardadas na lista ligada:
+  R1 -> R2
+  R2 -> R3
+  R3 -> R4
+  R4 -> R1
+
+Vizinhos de cada nó (previous | current | next):
+  R4 | R1 | R2
+  R1 | R2 | R3
+  R2 | R3 | R4
+  R3 | R4 | R1
+
+Percurso seguindo next:
+  passo 0: current = R1, previous = R4, next = R2
+  passo 1: current = R2, previous = R1, next = R3
+  passo 2: current = R3, previous = R2, next = R4
+  passo 3: current = R4, previous = R3, next = R1
+  Após 4 passos, next volta a R1 (ciclo fechado da figura).
+
+=== CIRCLE ===
+Nós: 1 | Ligações: 0
+Representação visual no terminal:
+       *****
+    **       **
+  **           **
+ *               *
+ *               *
+  **           **
+    **       **
+       *****
+Ligações guardadas na lista ligada:
+  (nenhuma ligação recta)
+
+Vizinhos de cada nó (previous | current | next):
+  null | C | null
+
+Percurso seguindo next:
+  passo 0: current = C, previous = null, next = null
+  Fim do percurso: next não existe, logo current passa a null.
+
+=== VALIDAÇÃO DE TIPOS E STRATEGY PATTERN ===
+Strategy usada para criar: TRIANGLE
+Tentativa rejeitada: Forma não permitida: pentagono. Apenas TRIANGLE, RECTANGLE e CIRCLE são aceites.
