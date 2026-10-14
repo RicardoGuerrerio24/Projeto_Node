@@ -14,6 +14,7 @@ As restantes classes são auxiliares de implementação, organizadas por respons
 geometry-linked-list-java/
 ├── pom.xml
 └── src/main/java/
+    ├── Main.java
     ├── model/
     │   ├── Node.java
     │   ├── Connection.java
@@ -28,8 +29,7 @@ geometry-linked-list-java/
     │   ├── RectangleCreationStrategy.java
     │   └── CircleCreationStrategy.java
     ├── control/
-    │   ├── ShapeFactory.java
-    │   └── Main.java
+    │   └── ShapeFactory.java
     └── view/
         ├── ShapeNavigator.java
         └── TerminalShapeRenderer.java
